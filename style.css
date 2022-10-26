@@ -1,0 +1,142 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #EFF1FF;
+}
+
+body::before {
+  content: '';
+
+  height: 32rem;
+  width: 100%;
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: #8E9AAF;
+}
+
+.page{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 40rem;
+}
+
+header{
+  text-align: center;
+}
+
+header .logo{
+  padding: 3.2rem;
+}
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5.4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  
+  color: #ffffff;
+  background-color: #CBC0D3;
+  width: 100vw;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+  padding: 2rem 4rem 6rem;
+}
+
+main p{
+  font-family: 'Palanquin', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: #23053A;
+
+  margin-bottom: 3.2rem;
+ 
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  filter: brightness(0.9);
+  
+  animation: downtop 700ms 200ms backwards;
+}
+
+.card {
+  position: relative;
+}
+
+.card span {
+  position: absolute;
+  top: 1.7rem;
+  right: 4rem;
+  font-family: 'Staatliches';
+  color: #4A4E69;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  width: fit-content;
+  height: 3.5rem;
+  background: #FEEAFA;
+  border-radius: 2rem;
+  padding: 0 2.3rem;
+
+  display: inline-flex;
+  align-items: center;
+  animation: topdown 700ms 500ms backwards;
+}
+
+#first-img{
+  height: 25rem;
+}
+
+#second-img{
+  height: 45rem;
+}
+
+/*-------------- ANIMATION CSS ------------*/
+@keyframes topdown {
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
