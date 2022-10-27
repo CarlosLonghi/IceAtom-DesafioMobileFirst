@@ -1,3 +1,4 @@
+/*--------- GERAL ---------*/
 *{
   margin: 0;
   padding: 0;
@@ -6,8 +7,11 @@
 
 :root {
   font-size: 62.5%;
+  --fs-heading: clamp(4rem, 1rem + 4vw, 5.4rem);
+  --fs-main: clamp(2rem, 1rem + 2vw, 3rem);
 }
 
+/*--------- BODY ---------*/
 body {
   background: #EFF1FF;
 }
@@ -25,26 +29,28 @@ body::before {
   background: #8E9AAF;
 }
 
+/*--------- PAGE ---------*/
 .page{
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  max-width: 40rem;
+  max-width: clamp(40rem, 25rem + 20vw, 50rem);
 }
 
+/*--------- HEADER ---------*/
 header{
   text-align: center;
 }
 
 header .logo{
-  padding: 3.2rem;
+  padding: 3.2rem 0;
 }
 
 header h1 {
   font-family: 'Staatliches', cursive;
-  font-size: 4rem;
+  font-size: var(--fs-heading);
   font-weight: 400;
   line-height: 5.4rem;
   letter-spacing: 0.05em;
@@ -57,6 +63,7 @@ header h1 {
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+/*--------- MAIN ---------*/
 main {
   display: grid;
   gap: 3.2rem;
@@ -66,12 +73,11 @@ main {
 main p{
   font-family: 'Palanquin', sans-serif;
   text-align: center;
-  font-size: 2rem;
-  line-height: 2.2rem;
+  font-size: var(--fs-main);
+  line-height: 2.5rem;
   color: #23053A;
 
   margin-bottom: 3.2rem;
- 
 }
 
 img {
@@ -83,6 +89,7 @@ img {
   animation: downtop 700ms 200ms backwards;
 }
 
+/*--------- CARDS ---------*/
 .card {
   position: relative;
 }
@@ -93,7 +100,7 @@ img {
   right: 4rem;
   font-family: 'Staatliches';
   color: #4A4E69;
-  font-size: 2rem;
+  font-size: var(--fs-main);
   line-height: 3.4rem;
   letter-spacing: 0.05em;
 
@@ -122,7 +129,6 @@ img {
     opacity: 0;
     transform: translateY(-15px);
   }
-
   100%{
     opacity: 1;
     transform: translateY(0);
@@ -134,7 +140,6 @@ img {
     opacity: 0;
     transform: translateY(15px);
   }
-
   100%{
     opacity: 1;
     transform: translateY(0);
